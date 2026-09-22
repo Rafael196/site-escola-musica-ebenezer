@@ -1,0 +1,703 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+
+    z-index: 1;
+}
+
+.logo img {
+    width: 40px;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: #222;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: #174a91;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 12px;
+}
+
+.redes-sociais img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1024 / 440;
+    overflow: hidden;
+}
+
+.imagem-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Botão de localização */
+
+.botao-localizacao {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 30px;
+    padding: 10px 18px;
+
+    background-color: #777;
+    color: white;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.botao-localizacao img {
+    width: 20px;
+}
+
+.botao-localizacao:hover
+{
+    background-color: #555; /* Escurece levemente o fundo */
+    transform: translateX(-50%) translateY(-3px); /* Eleva o botão 3px */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35); /* Intensifica a sombra */
+}
+
+
+/* =========================
+   SOBRE A ESCOLA
+========================= */
+
+.sobre {
+    padding: 55px 70px;
+    background-color: #ffffff;
+}
+
+.sobre-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sobre-texto {
+    width: 50%;
+}
+
+.sobre-texto h1 {
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.sobre-texto p {
+    max-width: 500px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.sobre-imagens {
+    position: relative;
+
+    width: 40%;
+    height: 300px;
+}
+
+.sobre-imagens img {
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.sobre-imagens img:first-child {
+    top: 0;
+    left: 0;
+}
+
+.sobre-imagens img:last-child {
+    right: 0;
+    bottom: 0;
+}
+
+/* =========================
+   PROFESSORES
+========================= */
+
+.professores {
+    padding: 55px 70px;
+    background-color: #ffffff;
+}
+
+.professores-conteudo {
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.professores h2 {
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.professores-lista {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 50px;
+    flex-wrap: wrap; /* Para se ajustar melhor em telas menores */
+}
+
+.professor {
+    position: relative; /* Necessário para posicionar as informações sobre a imagem */
+    display: block;
+    background-color: #174a91;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Leve elevação e sombra no card do professor */
+.professor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.professor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Leve zoom na imagem do professor */
+.professor:hover img {
+    transform: scale(1.1);
+}
+
+/* Camada com as informações do professor */
+.professor-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 74, 145, 0.85); /* Azul baseado na sua cor de fundo (#174a91) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 0; /* Escondido por padrão */
+    transition: opacity 0.3s ease;
+}
+
+/* Exibe o nome e instrumento ao passar o mouse */
+.professor:hover .professor-info {
+    opacity: 1;
+}
+
+.professor-info span {
+    font-size: 16px;
+    font-weight: 600;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+.professor-info small {
+    font-size: 13px;
+    color: #ffd700; /* Cor amarelada/dourada para destacar */
+    margin-top: 5px;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+/* Animação suave subindo os textos no hover */
+.professor:hover .professor-info span,
+.professor:hover .professor-info small {
+    transform: translateY(0);
+}
+
+/* =========================
+   CURSOS
+========================= */
+
+.cursos {
+    padding: 55px 70px;
+}
+
+.cursos-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cursos h2 {
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.cursos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* Mantém responsivo */
+    gap: 25px;
+}
+
+.curso {
+    position: relative;
+    width: 190px;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao aproximar o mouse do card */
+.curso:hover {
+    transform: translateY(-6px); /* Eleva o card suavemente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Destaque com sombra */
+}
+
+.curso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Transição para o efeito de zoom */
+}
+
+/* Zoom suave na imagem ao dar hover */
+.curso:hover img {
+    transform: scale(1.08);
+}
+
+.curso-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 8px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85)); /* Gradiente para dar melhor leitura */
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.curso:hover .curso-info {
+    background: rgba(0, 0, 0, 0.85); /* Fundo um pouco mais escuro ao focar */
+}
+
+.curso-info span {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.curso-info small {
+    display: block;
+    font-size: 11px;
+    margin-top: 4px;
+    opacity: 0;
+    transform: translateY(8px); /* Inicia ligeiramente deslocado */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: #ffd700; /* Cor amarela/dourada para destacar o 'Ver fotos' */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Revela o "Ver fotos" subindo suavemente */
+.curso:hover .curso-info small {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-coluna {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-coluna h3, .footer-coluna h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-coluna p, .footer-coluna a {
+    font-size: 14px;
+    color: #cccccc;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-coluna a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+    text-align: center;
+    font-size: 13px;
+    color: #888888;
+}
+
+/* =========================
+   GALERIA / MODAL CSS
+========================= */
+
+.modal-galeria {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none; /* Mantém escondido */
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+/* Quando clica no link #galeria-X, o CSS ativa a exibição */
+.modal-galeria:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-conteudo {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    color: #333;
+}
+
+.modal-conteudo h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Padds universais para o topo da página não ficar escondido pelo Header Fixo */
+body {
+    padding-top: 60px;
+}
+
+/* ----------------------------------
+   TABLETS E TELAS MÉDIAS (Até 992px)
+---------------------------------- */
+@media (max-width: 992px) {
+    /* Header */
+    .header {
+        padding: 0 15px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .redes-sociais img {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* Sobre a Escola */
+    .sobre {
+        padding: 40px 30px;
+    }
+
+    .sobre-conteudo {
+        gap: 30px;
+    }
+
+    .sobre-texto {
+        width: 55%;
+    }
+
+    .sobre-imagens {
+        width: 45%;
+        height: 260px;
+    }
+
+    .sobre-imagens img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+
+/* ----------------------------------
+   CELULARES (Até 768px)
+---------------------------------- */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        height: 55px;
+        padding: 0 12px;
+    }
+
+    body {
+        padding-top: 55px;
+    }
+
+    .logo img {
+        width: 32px;
+    }
+
+    /* Menu adaptado para telas pequenas */
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .redes-sociais {
+        gap: 8px;
+    }
+
+    .redes-sociais img {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Hero Banner */
+    .hero {
+        /* Altera a proporção da imagem para não achatar no celular */
+        aspect-ratio: 4 / 3;
+    }
+
+    .botao-localizacao {
+        font-size: 10px;
+        padding: 8px 14px;
+        bottom: 15px;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    .botao-localizacao img {
+        width: 16px;
+    }
+
+    /* Sobre a Escola (Empilha o texto e as fotos verticalmente) */
+    .sobre {
+        padding: 35px 20px;
+    }
+
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-texto {
+        width: 100%;
+    }
+
+    .sobre-texto h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .sobre-texto p {
+        max-width: 100%;
+        font-size: 13px;
+    }
+
+    /* Ajuste das imagens sobrepostas no mobile */
+    .sobre-imagens {
+        width: 100%;
+        max-width: 320px;
+        height: 230px;
+        margin: 20px auto 0 auto;
+    }
+
+    .sobre-imagens img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+/* ----------------------------------
+   CELULARES PEQUENOS (Até 480px)
+---------------------------------- */
+@media (max-width: 480px) {
+    /* Esconde ícones de redes sociais se a tela for extremamente estreita para evitar quebrar a barra */
+    .redes-sociais {
+        display: none; 
+    }
+
+    .menu {
+        gap: 8px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+    .sobre-imagens {
+        height: 200px;
+    }
+
+    .sobre-imagens img {
+        width: 130px;
+        height: 130px;
+    }
+}
