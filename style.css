@@ -23,22 +23,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 25px;
-
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
-
     z-index: 1;
 }
 
 .logo img {
     width: 40px;
-    display: block;
+    display: flex;
+}
+
+.menu-mobile {
+    display: none;
 }
 
 .menu {
     display: flex;
+    margin: 0 auto;
     gap: 25px;
 }
 
@@ -110,18 +112,20 @@ body {
 
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    
+
 }
 
 .botao-localizacao img {
     width: 20px;
 }
 
-.botao-localizacao:hover
-{
-    background-color: #555; /* Escurece levemente o fundo */
-    transform: translateX(-50%) translateY(-3px); /* Eleva o botão 3px */
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35); /* Intensifica a sombra */
+.botao-localizacao:hover {
+    background-color: #555;
+    /* Escurece levemente o fundo */
+    transform: translateX(-50%) translateY(-3px);
+    /* Eleva o botão 3px */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+    /* Intensifica a sombra */
 }
 
 
@@ -221,11 +225,13 @@ body {
     align-items: center;
     margin: 0;
     gap: 50px;
-    flex-wrap: wrap; /* Para se ajustar melhor em telas menores */
+    flex-wrap: wrap;
+    /* Para se ajustar melhor em telas menores */
 }
 
 .professor {
-    position: relative; /* Necessário para posicionar as informações sobre a imagem */
+    position: relative;
+    /* Necessário para posicionar as informações sobre a imagem */
     display: block;
     background-color: #174a91;
     width: 200px;
@@ -262,7 +268,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(23, 74, 145, 0.85); /* Azul baseado na sua cor de fundo (#174a91) */
+    background: rgba(23, 74, 145, 0.85);
+    /* Azul baseado na sua cor de fundo (#174a91) */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,7 +278,8 @@ body {
     text-align: center;
     padding: 15px;
     box-sizing: border-box;
-    opacity: 0; /* Escondido por padrão */
+    opacity: 0;
+    /* Escondido por padrão */
     transition: opacity 0.3s ease;
 }
 
@@ -289,7 +297,8 @@ body {
 
 .professor-info small {
     font-size: 13px;
-    color: #ffd700; /* Cor amarelada/dourada para destacar */
+    color: #ffd700;
+    /* Cor amarelada/dourada para destacar */
     margin-top: 5px;
     transform: translateY(10px);
     transition: transform 0.3s ease;
@@ -324,7 +333,8 @@ body {
 
 .cursos-lista {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* Mantém responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    /* Mantém responsivo */
     gap: 25px;
 }
 
@@ -340,15 +350,18 @@ body {
 
 /* Efeito ao aproximar o mouse do card */
 .curso:hover {
-    transform: translateY(-6px); /* Eleva o card suavemente */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Destaque com sombra */
+    transform: translateY(-6px);
+    /* Eleva o card suavemente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Destaque com sombra */
 }
 
 .curso img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease; /* Transição para o efeito de zoom */
+    transition: transform 0.4s ease;
+    /* Transição para o efeito de zoom */
 }
 
 /* Zoom suave na imagem ao dar hover */
@@ -364,13 +377,15 @@ body {
     padding: 12px 8px;
     text-align: center;
     color: #ffffff;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85)); /* Gradiente para dar melhor leitura */
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    /* Gradiente para dar melhor leitura */
     transition: background 0.3s ease;
     z-index: 1;
 }
 
 .curso:hover .curso-info {
-    background: rgba(0, 0, 0, 0.85); /* Fundo um pouco mais escuro ao focar */
+    background: rgba(0, 0, 0, 0.85);
+    /* Fundo um pouco mais escuro ao focar */
 }
 
 .curso-info span {
@@ -384,9 +399,11 @@ body {
     font-size: 11px;
     margin-top: 4px;
     opacity: 0;
-    transform: translateY(8px); /* Inicia ligeiramente deslocado */
+    transform: translateY(8px);
+    /* Inicia ligeiramente deslocado */
     transition: opacity 0.3s ease, transform 0.3s ease;
-    color: #ffd700; /* Cor amarela/dourada para destacar o 'Ver fotos' */
+    color: #ffd700;
+    /* Cor amarela/dourada para destacar o 'Ver fotos' */
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -423,13 +440,15 @@ body {
     min-width: 200px;
 }
 
-.footer-coluna h3, .footer-coluna h4 {
+.footer-coluna h3,
+.footer-coluna h4 {
     font-size: 18px;
     margin-bottom: 15px;
     color: #ffffff;
 }
 
-.footer-coluna p, .footer-coluna a {
+.footer-coluna p,
+.footer-coluna a {
     font-size: 14px;
     color: #cccccc;
     text-decoration: none;
@@ -475,7 +494,8 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    pointer-events: none; /* Mantém escondido */
+    pointer-events: none;
+    /* Mantém escondido */
     transition: opacity 0.3s ease;
     z-index: 1000;
 }
@@ -539,9 +559,14 @@ body {
    TABLETS E TELAS MÉDIAS (Até 992px)
 ---------------------------------- */
 @media (max-width: 992px) {
+
     /* Header */
     .header {
         padding: 0 15px;
+    }
+
+    .menu-mobile {
+        display: none;
     }
 
     .menu {
@@ -586,10 +611,15 @@ body {
    CELULARES (Até 768px)
 ---------------------------------- */
 @media (max-width: 768px) {
+
     /* Header */
     .header {
         height: 55px;
         padding: 0 12px;
+    }
+
+    .logo {
+        display: none;
     }
 
     body {
@@ -601,12 +631,30 @@ body {
     }
 
     /* Menu adaptado para telas pequenas */
+    .menu-mobile {
+        display: block;
+    }
+
     .menu {
-        gap: 10px;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .menu:not(.show) {
+        display: none;
+    }
+
+    .menu.show {
+        display: flex;
     }
 
     .menu a {
-        font-size: 10px;
+        padding: 15px 25px;
     }
 
     .redes-sociais {
@@ -679,10 +727,6 @@ body {
    CELULARES PEQUENOS (Até 480px)
 ---------------------------------- */
 @media (max-width: 480px) {
-    /* Esconde ícones de redes sociais se a tela for extremamente estreita para evitar quebrar a barra */
-    .redes-sociais {
-        display: none; 
-    }
 
     .menu {
         gap: 8px;
